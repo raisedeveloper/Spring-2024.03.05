@@ -1,4 +1,4 @@
-package com.example.sb.Users;
+package com.example.sb.users;
 
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<User> getUserList(int page) {
         int offset = (page - 1) * COUNT_PER_PAGE;
-        return uDao.getUserList(page, offset);
+        return uDao.getUserList(COUNT_PER_PAGE, offset);
     }
 
     @Override

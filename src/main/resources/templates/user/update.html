@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tb, td {padding: 3px; }
+    </style>
+</head>
+<body style="margin: 50px">
+    <h1>사용자 업데이트</h1>
+    <hr>
+    <table border="1">
+    <form action="/sb/user/update" metbod="post">
+        <tr>
+            <tb>No.<input type="text" value="${userStat.count}" disabled></tb><br><br>
+            <tb>uid<input type="text" value="${user.uid}" ><br><br></tb>
+            <tb>uname<input type="text" value="${user.uname}" ></tb><br><br>
+            <tb>email<input type="text" value="${user.email}" ></tb><br><br>
+            <tb>pwd<input type="password" value="${user.pwd}" ></tb><br><br>
+            <tb>pwd2<input type="password" value="${user.pwd2}" ></tb>
+        </tr>
+    </form>
+    </table>
+</body>
+</html>

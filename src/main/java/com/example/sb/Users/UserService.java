@@ -1,4 +1,4 @@
-package com.example.sb.Users;
+package com.example.sb.users;
 
 import java.util.List;
 
