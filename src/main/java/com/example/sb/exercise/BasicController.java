@@ -92,9 +92,10 @@ public class BasicController {
 	   }
    }
    
-   @GetMapping("/path/{uid}/{bid}")
+   @GetMapping(value={"/path/{uid}/{bid}", "/path/{uid}"})
    @ResponseBody //결과를 바로 String 으로 볼 수 있음
-   public String path(@PathVariable String uid, @PathVariable int bid) {
+   public String path(@PathVariable String uid, @PathVariable(required=false) Integer bid) {
+	   bid = (bid == null) ? 0 : bid;
 	   return "<h1>uid=" + uid + ", bid=" + bid + "</h1>";
    }
 }
