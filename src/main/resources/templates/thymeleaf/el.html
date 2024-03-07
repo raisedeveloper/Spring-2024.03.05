@@ -22,9 +22,17 @@
       <li>[[${memberList[1]'name']}]]</li>
       <li>[[${memberList[1].getAge()}]]</li>
     </ul>
-    <ul> 세션
-		<li>[[${session.sessUname}]]</span></li>
-		<li>[[${member.getAge()}]]</span></li>
-	</ul>
-</body>
+    <ul> 세션 편의객체
+		  <li>[[${session.sessUname}]]</li>
+		  <li>[[${member.sessAge()}]]</li>
+	  </ul>
+    <ul>LocalDateTime - temporals
+		  <li>[[${now}]]</li>
+		  <li>[[${#temporals.format(now, 'yyyy-MM-dd HH:mm:ss')}]]</li>
+    </ul>
+    <ul>LocalDateTime - String 으로 변환
+		  <li>[[${now}]]</li>
+		  <li>[[${#strings.subString(#strings.replace(now, 'T', ' ')0, 19)}]]</li>
+    </ul>
+  </body>
 </html>
